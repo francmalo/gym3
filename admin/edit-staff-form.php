@@ -21,6 +21,25 @@ header('location:../index.php');
 <link href="../font-awesome/css/all.css" rel="stylesheet" />
 <link rel="stylesheet" href="../css/jquery.gritter.css" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+
+
+<style>
+  /* Style for checkboxes */
+  input[type="checkbox"] {
+  display: inline-block;
+  margin-right: 10px; 
+}
+
+label {
+  font-weight: bold;
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.checkbox-group {
+  margin-bottom: 20px;
+}
+</style>
 </head>
 <body>
 
@@ -174,6 +193,42 @@ while($row=mysqli_fetch_array($result)){
                     </select>
                   </div>
                 </div>
+
+                <div class="checkbox-group">
+                           <h3>Permissions</h3>
+                           
+<p>
+                <input type="checkbox" name="AccessMember" <?php echo $row['AccessMember'] == 1 ? "checked='checked'" : ""; ?> value="1">
+                <label>Access Members </label>
+
+                <input type="checkbox" name="AccessEquipment"  <?php echo $row['AccessEquipment'] == 1 ? "checked='checked'" : ""; ?> value="1">
+                <label>Access Equipments </label>
+               
+                <input type="checkbox" name="AccessAttendance" <?php echo $row['AccessAttendance'] == 1 ? "checked='checked'" : ""; ?> value="1"> 
+                <label>Access Attendance </label>
+               
+                <input type="checkbox" name="AccessCustomerprogress" <?php echo $row['AccessCustomerprogress'] == 1 ? "checked='checked'" : ""; ?> value="1"> 
+                <label> Access Customer Progress </label>
+
+                <input type="checkbox" name="AccessStatus" <?php echo $row['AccessStatus'] == 1 ? "checked='checked'" : ""; ?> value="1"> 
+                <label>  Access Status </label>
+
+                <input type="checkbox" name="AccessPayment" <?php echo $row['AccessPayment'] == 1 ? "checked='checked'" : ""; ?> value="1">
+                 <label>Access Payments</label>
+
+                <input type="checkbox" name="AccessAnnouncement" <?php echo $row['AccessAnnouncement'] == 1 ? "checked='checked'" : ""; ?> value="1"> 
+                <label>Access announcement </label>
+
+                <input type="checkbox" name="AccessStaff" <?php echo $row['AccessStaff'] == 1 ? "checked='checked'" : ""; ?> value="1"> 
+                <label> Access Staff </label>
+
+                <input type="checkbox" name="AccessAccounting" <?php echo $row['AccessAccounting'] == 1 ? "checked='checked'" : ""; ?> value="1"> 
+                <label>Access Accounting </label>
+
+                <input type="checkbox" name="AccessReport" <?php echo $row['AccessReport'] == 1 ? "checked='checked'" : ""; ?> value="1"> 
+                <label>Access Report </label>
+</p>
+              </div>
 			
 			
           </div>
